@@ -3,10 +3,10 @@ CREATE DATABASE HURTOS
 USE HURTOS
 
 CREATE TABLE Hurto (
-  Direccion VARCHAR(60) NOT NULL, PRIMARY KEY, UNIQUE,
+  Direccion VARCHAR(60) NOT NULL PRIMARY KEY,
   Latitud INT NOT NULL,
   longitud VARCHAR(6) NOT NULL,
-  Fecha_hurto DATETIME NOT NULL, UNIQUE,
+  Fecha_hurto DATETIME NOT NULL,
   tipo_hurto VARCHAR(45) NOT NULL,
   detalle_hurto TEXT NOT NULL,
   valor_aproximado FLOAT NOT NULL
@@ -43,7 +43,7 @@ INSERT INTO Hurto (Direccion, Latitud, longitud, Fecha_hurto, tipo_hurto, detall
 ('calle45#62a53', 3, 66, 16-04-2005, 'celular', 'me lo sacaron del bolso en el bus', 256000)
 
 CREATE TABLE Tipo_de_hurto (
-idtipo_hurto INT not NULL PRIMARY KEY, UNIQUE,
+idtipo_hurto INT NOT NULL PRIMARY KEY,
 Nombre VARCHAR(45) NOT NULL
 );
 
